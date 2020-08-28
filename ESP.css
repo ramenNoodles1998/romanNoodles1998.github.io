@@ -1,0 +1,65 @@
+#start {
+    display: none;
+}
+
+#next {
+    display: none;
+}
+
+#loss {
+    display: none;
+}
+
+#success {
+    display: none;
+}
+
+.magic-card {
+    margin-top: 40%;
+    height: 500px;
+    width: 300px;
+    background-color: rgb(63, 58, 58);
+}
+.play-game-btn {
+    margin-top: 10px;
+    width: 200px;
+}
+
+.Circle {
+    display: none;
+    margin: auto;
+    max-height: 50px;
+    width: 50px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+
+.plus {
+    display: none;
+    margin: auto;
+    font-size: 250px;
+    color: #bbb;
+}
+
+.waves {
+    display: none;
+    margin: auto;
+    font-size: 50px;
+    color: #bbb;
+    transform: rotate(90deg);
+    line-height: 30%;
+}
+
+.Square {
+    display: none;
+    margin: auto;
+    font-size: 250px;
+    color: #bbb;
+}
+
+.star {
+    display: none;
+    margin: auto;
+    font-size: 250px;
+    color: #bbb;
+}
