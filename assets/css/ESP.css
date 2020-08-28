@@ -25,7 +25,7 @@
     width: 200px;
 }
 
-.Circle {
+.circle {
     display: none;
     margin: auto;
     max-height: 50px;
@@ -50,7 +50,7 @@
     line-height: 30%;
 }
 
-.Square {
+.square {
     display: none;
     margin: auto;
     font-size: 250px;
