@@ -2,10 +2,10 @@
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
-let cardStack = [ 'Circle', 'Circle', 'Circle', 'Circle', 'Circle', 
-                    'plus', 'plus', 'plus', 'plus', 'plus', 'plus', 
+let cardStack = [ 'circle', 'circle', 'circle', 'circle', 'circle', 
+                    'plus', 'plus', 'plus', 'plus', 'plus',
                     'waves', 'waves', 'waves', 'waves', 'waves', 
-                    'Square', 'Square', 'Square', 'Square', 'Square', 
+                    'square', 'square', 'square', 'square', 'square', 
                     'star', 'star', 'star', 'star', 'star']
 let score = 0
 
@@ -32,11 +32,9 @@ $(function() {
         console.log(shape)
 
         if(cardStack.length > 0) {
-            console.log(cardStack[0])
             if(shape === cardStack[0]) {
                 score++
             }
-            console.log('score', score)
 
             cardReveal()
         } else {
