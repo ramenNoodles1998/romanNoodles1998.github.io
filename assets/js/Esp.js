@@ -29,12 +29,14 @@ $(function() {
 
     recognition.onresult = function(event) {
         let shape = event.results[event.results.length-1][0].transcript
-        console.log(shape)
+        shape = shape.replace(/\s/g, '')
 
         if(cardStack.length > 0) {
-            if(shape === cardStack[0]) {
+            cardStack[0] = cardStack[0].replace(/\s/g, '')
+            if(shape.toLowerCase() === cardStack[0].toLowerCase()) {
                 score++
             }
+            console.log('score', score)
 
             cardReveal()
         } else {
