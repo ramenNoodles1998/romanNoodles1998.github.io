@@ -36,7 +36,6 @@ $(function() {
             if(shape.toLowerCase() === cardStack[0].toLowerCase()) {
                 score++
             }
-            console.log('score', score)
 
             cardReveal()
         } else {
