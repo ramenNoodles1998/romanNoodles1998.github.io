@@ -20,6 +20,7 @@ $(function() {
     recognition.lang = 'en-US'
     recognition.interimResults = false
     recognition.maxAlternatives = 2
+    $('.score').html('<h1>0/25</h1>')
 
     $('.play-game-btn').click(() => {
         $('#start')[0].play()
@@ -35,7 +36,9 @@ $(function() {
             cardStack[0] = cardStack[0].replace(/\s/g, '')
             if(shape.toLowerCase() === cardStack[0].toLowerCase()) {
                 score++
+                $('.score').html(`<h1>${score}/25</h1>`)
             }
+            console.log('score', score)
 
             cardReveal()
         } else {
@@ -51,7 +54,7 @@ $(function() {
 })
 
 function cardReveal() {
-    const timeoutMS = 2000
+    const timeoutMS = 1500
 
     $('.magic-card').css('background-color', 'white')
     $(`.${cardStack[0]}`).css('display', 'block')
