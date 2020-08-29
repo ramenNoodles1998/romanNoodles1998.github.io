@@ -38,7 +38,6 @@ $(function() {
                 score++
                 $('.score').html(`<h1>${score}/25</h1>`)
             }
-            console.log('score', score)
 
             cardReveal()
         } else {
