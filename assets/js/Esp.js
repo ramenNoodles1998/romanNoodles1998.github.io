@@ -46,7 +46,8 @@ function secondaryButtonsFunc() {
             score++
             document.querySelector('.score').innerHTML = `<h1>${score}/10</h1>`
         } else {
-            window.navigator.vibrate(200);
+            window.navigator.vibrate(200)
+            console.log(window.navigator.vibrate)
             //vibrate if wrong
         }
     } else {
