@@ -1,69 +1,83 @@
-//I have no clue why this works with var and not let
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
-var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
-let cardStack = [ 'circle', 'circle', 'circle', 'circle', 'circle', 
-                    'plus', 'plus', 'plus', 'plus', 'plus',
-                    'waves', 'waves', 'waves', 'waves', 'waves', 
-                    'square', 'square', 'square', 'square', 'square', 
-                    'star', 'star', 'star', 'star', 'star']
+let cardStack = [ 'Circle', 
+                    'Plus',
+                    'Waves', 
+                    'Square', 
+                    'Star']
 let score = 0
+let count = 0
 
-$(function() {
+let randomCard
+
+document.addEventListener('DOMContentLoaded', function() {
     shuffle(cardStack)
-    let shapes = [ 'circle', 'plus', 'waves', 'square', 'star']
-    let grammar = '#JSGF V1.0; grammar shapes; public <shapes> = ' + shapes.join(' | ') + ' ;'
-    let recognition = new SpeechRecognition()
-    let speechRecognitionList = new SpeechGrammarList()
-    speechRecognitionList.addFromString(grammar, 1)
-    recognition.continuous = true
-    recognition.lang = 'en-US'
-    recognition.interimResults = false
-    recognition.maxAlternatives = 2
-    $('.score').html('<h1>0/25</h1>')
+    document.querySelector('.score').innerHTML = '<h1>0/10</h1>'
 
-    $('.play-game-btn').click(() => {
-        $('#start')[0].play()
-        $('.play-game-btn').hide()
-        recognition.start()
-    })
-
-    recognition.onresult = function(event) {
-        let shape = event.results[event.results.length-1][0].transcript
-        shape = shape.replace(/\s/g, '')
-
-        if(cardStack.length > 0) {
-            cardStack[0] = cardStack[0].replace(/\s/g, '')
-            if(shape.toLowerCase() === cardStack[0].toLowerCase()) {
-                score++
-                $('.score').html(`<h1>${score}/25</h1>`)
-            }
-
-            cardReveal()
-        } else {
-            //run ending voice line based on score
-            if(score > 10) {
-                $('#success')[0].play()
-            } else {
-                $('#loss')[0].play()
-            }
-        }
-        $('#start')[0].pause()
+    document.querySelector('.play-game-btn').onclick = () => {
+        document.querySelector('.play-game-btn').style.display = 'none'     
+        document.querySelector('.shape-btns').style.display = 'flex'  
+        document.querySelector('.next-btn').style.display = 'block'  
+        randomCard = cardStack[Math.floor(Math.random()*5)]  
     }
+
+    document.querySelectorAll('.btn-secondary')[0].onclick = secondaryButtonsFunc
+
+    document.querySelectorAll('.btn-secondary')[1].onclick = secondaryButtonsFunc
+
+    document.querySelectorAll('.btn-secondary')[2].onclick = secondaryButtonsFunc
+
+    document.querySelectorAll('.btn-secondary')[3].onclick = secondaryButtonsFunc
+
+    document.querySelectorAll('.btn-secondary')[4].onclick = secondaryButtonsFunc
+
+    document.querySelector('.next-btn').onclick = () => {
+        document.querySelector('.magic-card').style.display = 'block'
+        document.querySelector(`.${randomCard.toLowerCase()}`).style.display = 'none'
+        randomCard = cardStack[Math.floor(Math.random()*5)]
+    }  
 })
 
-function cardReveal() {
-    const timeoutMS = 1500
+function secondaryButtonsFunc() {
+    cardReveal()
+    if(count < 9) {
+        if(randomCard === this.innerHTML) {
+            //play pleasent song
+            document.querySelector('#successSound').play()
 
-    $('.magic-card').css('background-color', 'white')
-    $(`.${cardStack[0]}`).css('display', 'block')
-    //play voice line next
-    setTimeout(() => {
-        $('#next')[0].play()
-        $('.magic-card').css('background-color', 'rgb(63, 58, 58)')
-        $(`.${cardStack[0]}`).css('display', 'none')
-        cardStack.shift()
-    }, timeoutMS)
+            score++
+            document.querySelector('.score').innerHTML = `<h1>${score}/10</h1>`
+        } else {
+            window.navigator.vibrate(200);
+            //vibrate if wrong
+        }
+    } else {
+        if(randomCard === this.innerHTML) {
+            //play pleasent song
+            document.querySelector('#successSound').play()
+
+            score++
+            document.querySelector('.score').innerHTML = `<h1>${score}/10</h1>`
+        } else {
+            window.navigator.vibrate(200);
+            //vibrate if wrong
+        }
+        endGame()
+    }
+   
+    count++
+}
+
+function cardReveal() {
+    document.querySelector('.magic-card').style.display = 'none'
+    document.querySelector(`.${randomCard.toLowerCase()}`).style.display = 'block'
+}
+
+function endGame() {
+    document.querySelector('.next-btn').style.backgroundColor = 'white'
+    document.querySelector('.next-btn').style.color = 'black'
+    document.querySelector('.next-btn').innerHTML = score > 5 ? `You have ESP! Total: ${score}/10` : `Sorry, you don't have ESP. Total: ${score}/10`
+    document.querySelector('.next-btn').onclick = () => {}
+    document.querySelector('.shape-btns').style.display = 'none'
+    console.log('game over')
 }
 
 //from https://bost.ocks.org/mike/shuffle/
