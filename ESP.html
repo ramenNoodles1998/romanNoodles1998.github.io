@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <audio controls id="start">
-        <source src="./assets/audio/startingPhrase.mp3" type="audio/mpeg">
+    <audio controls id="successSound">
+        <source src="./assets/audio/339343__newagesoup__soft-blip-e-major.wav" type="audio/mpeg">
     </audio>
-    <audio controls id="next">
-        <source src="./assets/audio/nextPhrase.mp3" type="audio/mpeg">
-    </audio>
-    <audio controls id="loss">
-        <source src="./assets/audio/lossPhrase.mp3" type="audio/mpeg">
-    </audio>
-    <audio controls id="success">
-        <source src="./assets/audio/successPhrase.mp3" type="audio/mpeg">
-    </audio>
+
     <body>
         <div class="container">
             <div class="flex-row justify-content-start m-3 score">
             </div>
             <div class="row justify-content-center">
-                <div class="card magic-card">
-                    <div class="card-body circle">
-                    </div>
-                    <div class="card-body plus">
-                        &#43;
-                    </div>
-                    <div class="waves">
-                        <div>
-                            &#12316;
-                        </div>
-                        <div>
-                            &#12316;
-                        </div>
-                        <div>
-                            &#12316;
-                        </div>
-                    </div>
-                    <div class="card-body square">
-                        &#9632;
-                    </div>
-                    <div class="card-body star">
-                        &#9733;
-                    </div>
+                <div class="magic-card">
+                </div>
+                <div class="plus">
+                    <img src="./assets/images/PlusCard.svg" alt="">
+                </div>
+                <div class="waves">
+                    <img src="./assets/images/WavesCard.svg" alt="">
+                </div>
+                <div class="square">
+                    <img src="./assets/images/SquareCard.svg" alt="">
+                </div>
+                <div class="star">
+                    <img src="./assets/images/StarCard.svg" alt="">
+                </div>
+                <div class="circle">
+                    <img src="./assets/images/CircleCard#svgView(viewBox(0 0 0 0))" alt="">
                 </div>
             </div>
+        </div>
+
+            </div>
+            <div class="btn-group shape-btns justify-content-center" role="group">
+                <button type="button" class="btn btn-secondary">Circle</button>
+                <button type="button" class="btn btn-secondary">Plus</button>
+                <button type="button" class="btn btn-secondary">Waves</button>
+                <button type="button" class="btn btn-secondary">Square</button>
+                <button type="button" class="btn btn-secondary">Star</button>
+              </div>
             <div class="row justify-content-center">
                 <button type="button" class="btn btn-dark play-game-btn">Play A Game.</button>
+                <button type="button" class="btn btn-dark next-btn text-center">Next</button>
             </div>
         </div>
         
@@ -51,7 +47,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="./assets/js/Esp.js"></script>
-    <link rel="stylesheet" href="./assets/css/ESP.css">
+    <script src="assets/js/Esp.js"></script>
+    <link rel="stylesheet" href="assets/css/ESP.css">
 </html>

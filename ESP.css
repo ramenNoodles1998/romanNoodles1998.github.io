@@ -1,0 +1,52 @@
+#successSound {
+    display: none;
+}
+
+.magic-card {
+    height: 220px;
+    width: 130px;
+    background-color: rgb(63, 58, 58);
+    border-radius: 15px;
+}
+
+.shape-btns {
+    display: none;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.play-game-btn {
+    margin-top: 10px;
+    width: 200px;
+}
+
+.next-btn {
+    display: none;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.circle {
+    display: none;
+    padding-left: 38%;
+}
+
+.plus {
+    display: none;
+    padding-left: 18%;
+}
+
+.waves {
+    display: none;
+    margin-right: 35px;
+}
+
+.square {
+    display: none;
+    margin-right: 45%;
+}
+
+.star {
+    display: none;
+    margin-right: 85%;
+}
