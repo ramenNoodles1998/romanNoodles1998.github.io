@@ -46,8 +46,8 @@ function secondaryButtonsFunc() {
             score++
             document.querySelector('.score').innerHTML = `<h1>${score}/10</h1>`
         } else {
-            window.navigator.vibrate(200)
-            console.log(window.navigator.vibrate)
+            console.log('wrong')
+            window.navigator.vibrate(200);
             //vibrate if wrong
         }
     } else {
@@ -58,8 +58,8 @@ function secondaryButtonsFunc() {
             score++
             document.querySelector('.score').innerHTML = `<h1>${score}/10</h1>`
         } else {
+            console.log('wrong')
             window.navigator.vibrate(200);
-            console.log(window.navigator.vibrate)
             //vibrate if wrong
         }
         endGame()
@@ -76,6 +76,7 @@ function cardReveal() {
 function endGame() {
     document.querySelector('.next-btn').style.backgroundColor = 'white'
     document.querySelector('.next-btn').style.color = 'black'
+    document.querySelector('.next-btn').style.fontSize = '30px'
     document.querySelector('.next-btn').innerHTML = score > 5 ? `You have ESP! Total: ${score}/10` : `Sorry, you don't have ESP. Total: ${score}/10`
     document.querySelector('.next-btn').onclick = () => {}
     document.querySelector('.shape-btns').style.display = 'none'
