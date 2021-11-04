@@ -5,198 +5,133 @@
 		<title>Roman Meredith Profile</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="./assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+		<section id="sidebar">
+			<div class="inner">
+				<nav>
+					<ul>
+						<li><a href="#intro">Intro</i></a></li>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
+						<li><a href="#one">PickUpPals</a></li>
+
+						<li><a href="#two">C++/C#.NET programs</a></li>
+						
+						<li><a href="#three">Get in touch</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+
+		<div id="wrapper">
+			<section id="intro" class="wrapper style1 fullscreen fade-up">
 				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome!</a></li>
-							<li><a href="#one">JavaScript programs</a></li>
-							<li><a href="#two">C++/C#.NET programs</a></li>
-							<li><a href="#three">Get in touch</a></li>
-							
-						</ul>
-					</nav>
+					<h1>Roman Meredith</h1>
+
+					<p>This is my profile,</a><br/>
+
+					here are some of my projects</a>.</p>
+
+					<ul class="actions">
+						<li><a href="#one" class="button scrolly">projects</a></li>
+					</ul>
 				</div>
 			</section>
 
-		
-			<div id="wrapper">
-
-				
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<section id="one" class="wrapper style3 spotlights">
+				<section>
+					<div class="content">
 						<div class="inner">
-							<h1>Roman Meredith</h1>
-							<p>This is my profile,</a><br />
-							here are some of my projects</a>.</p>
+							<h2>PickUpPals</h2>
+
+							<p>
+								This was my Senior Capstone project to graduate from UVU. PickUpPals is a web app for finding pick up games in your area. 
+								You can use my login to obtain to show more features or create a new account. 
+								Also the backend will only be running during 9am to 5pm using a lamba script, and elastic beanstalk.
+							</p>
+
+							<ul>
+								<li>Username: rmeredith</li>
+
+								<li>Password: 123456</li>
+							</ul>
+
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">projects</a></li>
+								<li><a href="http://pick-up-pals.s3-website-us-east-1.amazonaws.com" class="button">program</a></li>
+								
+								<li><a href="https://github.com/ramenNoodles1998/PickUpPals/tree/master" class="button">front end code</a></li>
+
+								<li><a href="https://github.com/ramenNoodles1998/PickUpPalsBackend" class="button">back end code</a></li>
 							</ul>
 						</div>
-					</section>
-
-				
-					<section id="one" class="wrapper style2 spotlights">
-							<section>
-									<img src="images/TIctactoe2.JPG" alt="" data-position="top center" />
-									<div class="content">
-										<div class="inner">
-											<h2>Tic Tac Toe</h2>
-											<p>Tic tac toe that uses mini-max algorithm it cannot be beat!</p>
-											<ul class="actions">
-												<li><a href="TicTacToe.html" class="button">program</a></li>
-												<li><a href="https://github.com/ramenNoodles1998/TicTacToe" class="button">code</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								
-						<section>
-							<img src="images/currex.JPG" alt="" data-position="center center" />
-							<div class="content">
-								<div class="inner">
-									<h2>Currex Program</h2>
-									<p>This program in JQuery reads from a data rate api and updates the exchange rates from a json.</p>
-									<ul class="actions">
-										<li><a href="currex.html" class="button">program</a></li>
-										<li><a href="https://github.com/ramenNoodles1998/currex" class="button">code</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-								<a href="#" class="image"><img src="images/f.JPG" alt="" data-position="25% 25%" /></a>
-								<div class="content">
-									<div class="inner">
-										<h2>Flappy Bird</h2>
-										<p>I made a crude version of flappy bird hoping to add machine learning to it soon!</p>
-										<ul class="actions">
-											<li><a href="flappyBird.html" class="button">program</a></li>
-											<li><a href="https://github.com/ramenNoodles1998/flappyBird" class="button">code</a></li>
-										</ul>
-									</div>
-								</div>
-							</section>
-						
-					</section>
-
-				
-				<section id="two" class="wrapper style3 spotlights">
-					<section>
-						<img src="images/cEmployeeContainer.JPG" alt="" data-position="center center" />
-						<div class="content">
-							<div class="inner">
-								<h2>C# Employee Container</h2>
-								<p>(the inputs are red because they have letters present)</br>
-								Made for my advance C# class it is a winforms app that used polymorphism Employee types, delegates, and business logic singleton class.</p>
-								<ul class="actions">
-									
-									<li><a href="https://github.com/ramenNoodles1998/EmployeeWinforms/tree/master/lab1phase1v2/lab1phase1v2" class="button">code</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<section>
-						<img src="images/HashMap.JPG" alt="" data-position="top center" />
-						<div class="content">
-							<div class="inner">
-								<h2>Hash Map</h2>
-								<p>Wrote a program that is is a hash map of words. That can read through a .txt file and output the most common words.</p>
-								<ul class="actions">
-									
-									<li><a href="https://github.com/ramenNoodles1998/HashMapWordCount" class="button">code</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<section>
-						<img src="images/WeightedGraphs.JPG" alt="" data-position="25% 25%" />
-						<div class="content">
-							<div class="inner">
-								<h2>Weighted Graph</h2>
-								<p>This was a program that had a class weighted graph. That can run dijkstra's algorithm or a breadth first search on the graph you made.</p>
-								<ul class="actions">
-									<li><a href="https://github.com/ramenNoodles1998/WeightedGraph" class="button">code</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<section>
-					<img src="images/BST.JPG" alt="" data-position="25% 25%" />
-						<div class="content">
-							<div class="inner">
-								<h2>Balanced Binary Search Tree</h2>
-								<p>This program had a class that made an AVL tree that could add nodes, delete nodes, print the list and dynamically balance itself.</p>
-								<ul class="actions">
-									<li><a href="https://github.com/ramenNoodles1998/AVLTree" class="button">code</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
+					</div>
 				</section>
+			</section>
+		
+			<section id="two" class="wrapper style3 spotlights">
+			</section>
 
-				
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<div class="split style1">
-								
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>10382 Bayhill Dr.<br />
-											Utah, UT 84062<br />
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<p>romanmeredith@gmail.com</p>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(801) 884-8392</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												
-												<li><a href="https://github.com/ramenNoodles1998" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												
-												<li><a href="https://www.linkedin.com/in/roman-meredith-96a327184/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
 					
-
-			</div>
-
-		
-			<footer id="footer" class="wrapper style1-alt">
+			<section id="three" class="wrapper style1 fade-up">
 				<div class="inner">
-					<ul class="menu">
-						
-					</ul>
+					<h2>Get in touch</h2>
+
+					<div class="split style1">
+						<section>
+							<ul class="contact">
+								<li>
+									<h3>Address</h3>
+
+									<span>3887 W. Fresh Powder Lane<br/>
+
+									Meridian, ID 83642<br/>
+
+									USA</span>
+								</li>
+
+								<li>
+									<h3>Email</h3>
+
+									<p>romanmeredith@gmail.com</p>
+								</li>
+
+								<li>
+									<h3>Phone</h3>
+
+									<span>(801) 884-8392</span>
+								</li>
+
+								<li>
+									<h3>Social</h3>
+
+									<ul class="icons">
+										<li><a href="https://github.com/ramenNoodles1998" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+										
+										<li><a href="https://www.linkedin.com/in/roman-meredith-96a327184/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</section>
+					</div>
 				</div>
-			</footer>
-
+			</section>
+		</div>
 		
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					
+				</ul>
+			</div>
+		</footer>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
