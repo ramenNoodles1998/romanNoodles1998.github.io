@@ -1,10 +1,9 @@
 @import url(fontawesome-all.min.css);
 
-/*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+#skills {
+	display: flex;
+	flex-direction: column;
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -171,6 +170,7 @@ input, select, textarea {
 	}
 
 	p {
+		font-size: 1em;
 		margin: 0 0 2em 0;
 	}
 
@@ -178,7 +178,7 @@ input, select, textarea {
 		color: #ffffff;
 		font-weight: bold;
 		line-height: 1.5;
-		margin: 0 0 0.5em 0;
+		margin: 1em 0 1em 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2808,6 +2808,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		font-size: xx-large;
 	}
 
 		ul.icons li {
